@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 100vw;
+    height: 81px;
+    
+    display: flex;
+    justify-content: space-between; 
+}
+
+.icon {
+    margin: 24px;
+    
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.logo {
+    margin: 19px;
+    
+    max-height: 100%;
+    max-width: 100%;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background: linear-gradient(180deg, #FFFFFF 33.29%, #F7F8FC 100%);    
+}
+
+#section--user-action {
+    display: flex;
+    justify-content: center;
+    
+    padding: 12px;
+}
+
+#section--dog {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    
+    width: 233px;
+    height: 116px;
+    left: 14px;
+    top: 53px;
+
+    transform: rotate(-30deg);
+}
+
+.dog--avatar {
+    width: 95vw;
+    height: 70vh; 
+    height: calc(100vh - 233px) ;  
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.dog--text-container {
+    position: absolute;
+    bottom: 16px;
+    left: 12px;
+}
+
+.dog--title {   
+    color: #F8F8F8;   
+    font-size: 32px;
+    margin: 0;
+}
+
+.dog--description {
+    font-size: 24px;
+    color: #B7B7B7;
+}
+
+.container--icon-action-button {
+    width: 92px;
+    height: 92px;
+    
+    margin: 12px;
+    padding: 30px;
+    
+    display: flex;
+    justify-content: center;
+    
+    border-radius: 100%;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px #E9E9EA;
+}
+
+#button--reject:hover {
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px #EDD9DF;
+}
+
+#button--accept:hover {
+    background: #DBFFF4;
+    box-shadow: 0px 10px 20px #CCF1E6;
+}
+
+.end--screen {
+    width: 80%;
+    background: rgb(249,58,114);
+    background: linear-gradient(90deg, rgba(249,58,114,1) 0%, rgba(250,102,91,1) 100%);
+    border-radius: 50% 20% / 10% 40%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.end--emoji {
+    font-size: 80px;
+    margin: 0;
+}
