@@ -36,6 +36,7 @@ function like() {
 }
 
 function reject() {
+    console.log("clicked")
     if(!isWaiting){
         currentDog.reject()
         renderAfterAction()
