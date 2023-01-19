@@ -1,4 +1,3 @@
-// Remember to import the data and Dog class!
 import dogsArray from "./data.js"
 import Dog from "./Dog.js"
 
@@ -14,13 +13,14 @@ function render() {
     document.getElementById("section--dog").innerHTML = currentDog.getDogHtml()
 }
 
-function renderAfterAction() {
+function renderAfterAction(action) {
     document.getElementById("dog--avatar-container").innerHTML += currentDog.setSwipedHtml()
     isWaiting = true
     setTimeout(()=> {     
         if(dogsNumberArray.length > 0) {
             currentDog = getNextDog()
             render()
+            action == "like" ? document.getElementById("button--like").classList.remove('button--like') : document.getElementById("button--reject").classList.remove('button--reject');
             isWaiting = false
         } else { 
             endTinder()
@@ -30,16 +30,17 @@ function renderAfterAction() {
 
 function like() {
     if(!isWaiting){
+        document.getElementById("button--like").classList.add('button--like')
         currentDog.like()
-        renderAfterAction()
+        renderAfterAction("like")
     }
 }
 
 function reject() {
-    console.log("clicked")
     if(!isWaiting){
+        document.getElementById("button--reject").classList.add('button--reject');
         currentDog.reject()
-        renderAfterAction()
+        renderAfterAction("reject")
     }
 }
 
@@ -57,8 +58,4 @@ let currentDog = getNextDog()
 render()
 
 document.getElementById("button--reject").addEventListener("click", reject)
-document.getElementById("button--accept").addEventListener("click", like)
-
-// console.log(dog1.name)
-
-// console.log(getNextDog(dogsNumber))
+document.getElementById("button--like").addEventListener("click", like)
