@@ -17,7 +17,7 @@ class Dog {
     getDogHtml() {
         return `
             <div id="dog--avatar-container">
-                <img src="../${this.avatar}" class="dog--avatar"/>
+                <img src="./${this.avatar}" class="dog--avatar"/>
             </div>
 
             <div class="dog--text-container">
