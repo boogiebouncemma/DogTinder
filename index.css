@@ -134,14 +134,8 @@ main {
     padding: 30px;
 }
 
-/* @media only screen and (max-width: 500px) {
-  .icon--action-button {
-    width: 100px;
-    height: 100px;
-  }
-} */
-
-#button--reject:hover {
+/* section below disabled due to isseus on mobile */
+/* #button--reject:hover {
     background: #FFE7EF;
     box-shadow: 0px 10px 20px #EDD9DF;
 }
@@ -149,8 +143,17 @@ main {
 #button--accept:hover {
     background: #DBFFF4;
     box-shadow: 0px 10px 20px #CCF1E6;
+} */
+
+#button--reject:active {
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px #EDD9DF;
 }
 
+#button--accept:active {
+    background: #DBFFF4;
+    box-shadow: 0px 10px 20px #CCF1E6;
+}
 .end--screen {
     width: 80%;
     background: rgb(249,58,114);
