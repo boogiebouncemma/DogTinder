@@ -3,6 +3,7 @@
 }
 body {
     margin: 0;
+    line-height: 1;
     
     width: 100vw;
     height: 100vh;
@@ -15,7 +16,7 @@ body {
 
 nav {
     width: 100vw;
-    height: 81px;
+    height: 10vh;
     
     display: flex;
     justify-content: space-between; 
@@ -25,43 +26,37 @@ nav {
     margin: 24px;
     
     max-height: 100%;
-    max-width: 100%;
+    width: auto;
 }
 
 .logo {
     margin: 19px;
     
     max-height: 100%;
-    max-width: 100%;
+    width: auto;
 }
 
 main {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     
-    background: linear-gradient(180deg, #FFFFFF 33.29%, #F7F8FC 100%);    
-}
-
-#section--user-action {
-    display: flex;
-    justify-content: center;
-    
-    padding: 12px;
+    background: linear-gradient(180deg, #FFFFFF 33.29%, #F7F8FC 100%);
 }
 
 #section--dog {
     position: relative;
+    
 }
 
 .badge {
     position: absolute;
     
-    width: 233px;
+    max-width: 233px;
     height: 116px;
     left: 14px;
     top: 53px;
@@ -69,10 +64,13 @@ main {
     transform: rotate(-30deg);
 }
 
+#dog--avatar-container {
+    display: flex;
+}
+
 .dog--avatar {
     width: 95vw;
-    height: 70vh; 
-    height: calc(100vh - 233px) ;  
+    height: 75vh; 
     border-radius: 15px;
     object-fit: cover;
 }
@@ -94,21 +92,50 @@ main {
     color: #B7B7B7;
 }
 
+/* @media only screen and (max-width: 600px) {
+  .dog--description {
+    font-size: 24px;
+  }
+} */
+
+#section--user-action {
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .container--icon-action-button {
-    width: 92px;
-    height: 92px;
-    
+    max-width: 20vh;
+    max-height: 20vh;
     margin: 12px;
-    padding: 30px;
+    /* box-sizing: content-box; */
     
     display: flex;
     justify-content: center;
+    align-items: center;
     
     border-radius: 100%;
     
     background: #FFFFFF;
     box-shadow: 0px 10px 20px #E9E9EA;
 }
+
+.icon--action-button {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    padding: 30px;
+}
+
+/* @media only screen and (max-width: 500px) {
+  .icon--action-button {
+    width: 100px;
+    height: 100px;
+  }
+} */
 
 #button--reject:hover {
     background: #FFE7EF;
