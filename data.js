@@ -9,7 +9,7 @@ const dogs = [
     },
     {
         name: "Limon",
-        avatar: "images/limon.PNG",
+        avatar: "images/limon.jpg",
         age: 23,
         bio: "I might look tough, but inside I'm a real cutie",
         hasBeenSwiped: false,
