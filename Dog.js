@@ -5,16 +5,16 @@ class Dog {
     
     setSwipedHtml() {
         if (this.hasBeenSwiped && !this.hasBeenLiked) {
-            return `<img src="./images/badge-nope.png" class="badge"/>`
+            return `<img src="./images/badge-nope.png" class="badge"  alt="Badge showing that you rejected the dog"/>`
         } else  {
-            return `<img src="./images/badge-like.png" class="badge"/>`
+            return `<img src="./images/badge-like.png" class="badge" alt="Badge showing that you liked the dog"/>`
         }
     }
     
     getDogHtml() {
         return `
             <div id="dog--avatar-container">
-                <img src="./${this.avatar}" class="dog--avatar"/>
+                <img src="./${this.avatar}" alt="Image of the dog" class="dog--avatar"/>
             </div>
             <div class="dog--text-container">
                 <h1 class="dog--title">${this.name}, ${this.age}</h1>
